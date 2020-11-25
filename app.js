@@ -115,16 +115,18 @@ function submitUpdate(e){
 		let modal = document.getElementsByClassName('modal')[0];
 		modal.style.display="none";
 	}
-	let name = document.getElementById('upname').value;
-	let age = document.getElementById('upage').value;
-	let city = document.getElementById('upcity').value;
-	let salary = document.getElementById('upsal').value;
-	objs[uindex].name = name;
-	objs[uindex].age = Number(age);
-	objs[uindex].city = city;
-	objs[uindex].salary = Number(salary);
-	
-	display(objs);
+	if (e.target.className == "button") {
+		let name = document.getElementById('upname').value;
+		let age = document.getElementById('upage').value;
+		let city = document.getElementById('upcity').value;
+		let salary = document.getElementById('upsal').value;
+		objs[uindex].name = name;
+		objs[uindex].age = Number(age);
+		objs[uindex].city = city;
+		objs[uindex].salary = Number(salary);
+		
+		display(objs);
+	}
 	
 	
 }
